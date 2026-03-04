@@ -71,6 +71,53 @@ Bash
 
 allure serve target/allure-results
 
-💡 Nota sobre el estado actual
+💡 Framework de Automatización E2E: SauceDemo
+Arquitectura Robusta con Selenium, TestNG, Jenkins y Allure
 
-    Nota: Actualmente, el framework está configurado para ejecución con interfaz gráfica (Navegador visible). El modo Headless está en la hoja de ruta para la fase de integración con Jenkins.
+Este repositorio contiene un framework de automatización de pruebas de extremo a extremo (E2E) profesional, diseñado bajo el patrón de diseño Page Object Model (POM) para garantizar escalabilidad y facilidad de mantenimiento.
+🛠️ Stack Tecnológico
+
+    Lenguaje: Java 17.
+
+    Automatización: Selenium WebDriver 4.40.0.
+
+    Framework de Pruebas: TestNG.
+
+    Reportes Dinámicos: Allure Reports con integración de capturas de pantalla automáticas ante fallos.
+
+    CI/CD: Jenkins Pipeline (Pipeline as Code mediante Jenkinsfile).
+
+    Gestión de Dependencias: Maven.
+
+✨ Características Principales
+
+    Integración Continua (CI/CD): Configurado para ejecutarse automáticamente en Jenkins mediante un Pipeline orquestado.
+
+    Modo Headless (Invisible): Capacidad de ejecución en servidores sin interfaz gráfica mediante el parámetro -Dheadless=true.
+
+    Evidencia Visual Automática: En caso de fallo, el framework captura una imagen del estado exacto del navegador y la adjunta al reporte de Allure para un debugging inmediato.
+
+    Data-Driven Configuration: Gestión centralizada de URLs y credenciales mediante archivos de propiedades y ConfigReader.
+
+    Reportes de Calidad Profesional: Allure Report configurado para mostrar información del ambiente de ejecución (SO, Navegador, Ingeniero a cargo).
+
+🚀 Instrucciones de Ejecución
+Local
+
+    Clonar: git clone https://github.com/Dldiernmg/POM-SELENIUM-TESTNG-ALLURE.git
+
+    Ejecutar: mvn clean test
+
+    Ver Reporte: allure serve target/allure-results
+
+Jenkins
+
+    Crear un Job de tipo Pipeline.
+
+    Conectar con este repositorio de GitHub.
+
+    Ejecutar con el parámetro HEADLESS=true.
+
+Desarrollado por: Didier Norberto Marin (Tiko)
+
+Organización: Testimatic - Soluciones de Calidad de Software
