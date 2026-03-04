@@ -45,8 +45,8 @@ public class LoginTest extends BaseTest {
 
         // 3. Assertion: Comparamos el texto real vs el esperado
         String actualTitle = inventoryPage.getTitleValue();
-       // String expectedTitle = "Products";
-        String expectedTitle = "titulo erroneo";
+        //String expectedTitle = "Products";
+        String expectedTitle = "Productos"; // Esto lo puse mal a propósito para que falle y se vea la evidencia en el reporte
 
         // Si fallan, el tercer parámetro dirá exactamente por qué en el reporte
         Assert.assertEquals(actualTitle, expectedTitle, "❌ El login falló: El título de la página no es el esperado.");
